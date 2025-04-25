@@ -50,7 +50,7 @@ language_map = {
 def create_dataset():
     formatted_data = []
     for lang in languages:
-        tsv_file = f"/projects/data/mtechteam/amar/data/akshantar/{lang}/{lang}.translit.sampled.train.tsv"
+        tsv_file = f"/data/akshantar/{lang}/{lang}.translit.sampled.train.tsv"
         try:
             df = pd.read_csv(tsv_file, sep="\t", names=["indic", "roman"], usecols=[0, 1], encoding="utf-8", encoding_errors="replace")
             df=df.head(100)
